@@ -29,7 +29,7 @@ def encrypt(C_text,C_shift):
         #변경된 값은 알파벳[원래값+이동값] 에서 찾아내고 이를 뉴_워드에 넣어준다
         #뉴_워드에 넣어진 새로운값은 암호화_텍스트에 더해서 넣어주어 저장한다
     print(f"암호화된 문자는 {cipher_text} 입니다.")
-def decode(D_text,D_shift):
+def decrypt(D_text,D_shift):
     cipher_text = ""
     for char in D_text:
         position = alphabet.index(char)
@@ -41,4 +41,4 @@ def decode(D_text,D_shift):
 if(type == "encode"):
     encrypt(C_text=text, C_shift=shift)
 elif(type == "decode"):
-    decode(D_text=text, D_shift=shift)
+    decrypt(D_text=text, D_shift=shift)
